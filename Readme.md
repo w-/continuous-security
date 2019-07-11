@@ -15,11 +15,42 @@ Amazon GuardDuty is a threat detection service that continuously monitors for ma
 ![GuardDuty Visualizations](https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2018/09/05/visualize-GD-16.png)
 
 * Whether you're GuardDuty already or want to get started with it I've found the [Visualizing Amazon GuardDuty Findings](https://aws.amazon.com/blogs/security/visualizing-amazon-guardduty-findings/) example the one people get the most value from implementing. It will walk you through setting up GuardDuty, build out a pipeline to stream the events into another source, and ultimately build out the beautiful dashboard you see above.
+
 * Once you've got GuardDuty setup you need to make sure your team has timely visibility of the issues so they can act on them. Keat from Propeller Aero wrote [this neat setup to publish them GuardDuty findings into a Slack room](https://github.com/keattang/guard-duty-to-slack-lambda).
+
 * https://github.com/aws-samples/amazon-guardduty-hands-on/
+
 * https://github.com/aws-samples/amazon-guardduty-multiaccount-scripts
 
-## Baseline security best practices
+## Securing The Root Account
+
+Do not use the Root account for day-to-day activity. Setup IAM Users with appropriate permissions
+
+Enable MFA on Root Account User
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_mfa
+
+For virtual, review Authy vs Google Authenticator
+
+For larger organization, hardware mfa makes sense.
+
+Monitoring Root User Activity
+https://aws.amazon.com/blogs/mt/monitor-and-notify-on-aws-account-root-user-activity/
+
+Verify the root email account with AWS Support. 
+This is the last resort that Amazon will use to allow account recovery
+
+
+## AWS Security Hub
+- Compliance Checks
+
+
+## AWS Config
+- Additional Custom checks
+- See lifetime config changes to resources
+
+## Cloudtrail 
+- Auditable account of all changes to infrastructure
+
 
 
 ## Identity Federation
