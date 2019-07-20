@@ -26,30 +26,68 @@ Amazon GuardDuty is a threat detection service that continuously monitors for ma
 
 Do not use the Root account for day-to-day activity. Setup IAM Users with appropriate permissions
 
-Enable MFA on Root Account User
+- Enable MFA on Root Account User
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_mfa
-
 For virtual, review Authy vs Google Authenticator
-
 For larger organization, hardware mfa makes sense.
 
-Monitoring Root User Activity
+- Monitoring Root User Activity
 https://aws.amazon.com/blogs/mt/monitor-and-notify-on-aws-account-root-user-activity/
 
-Verify the root email account with AWS Support. 
+- Verify the root email account and phone number with AWS Support. Open a support ticket
 This is the last resort that Amazon will use to allow account recovery
 
 
 ## AWS Security Hub
-- Compliance Checks
+
+needs AWS Config running
+https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html
+
+- Enable Guard Duty 
+- Enable CIS Compliance Check
+
+https://github.com/awslabs/aws-securityhub-multiaccount-scripts
 
 
 ## AWS Config
 - Additional Custom checks
 - See lifetime config changes to resources
 
+
+
+## Web Federation
+Control access to console via web federation.
+
+
 ## Cloudtrail 
-- Auditable account of all changes to infrastructure
+### Best Practice
+Make sure Cloudtrail is enabled for all regions across all accounts.
+
+Setup cloudtrail logs in a separate child account with extremely restricted permissions
+
+Make sure no one has access to modify logs
+
+### Activities
+- Auditable account of all changes to infrastructure (can now be accomplished from AWS Config as well)
+
+- Make sure log file validation is enabled to validate log integrity
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html
+
+- Useful approaches to investgating Cloudtrail logs
+https://aws.amazon.com/blogs/big-data/aws-cloudtrail-and-amazon-athena-dive-deep-to-analyze-security-compliance-and-operational-activity/
+
+https://medium.com/starting-up-security/investigating-cloudtrail-logs-c2ecdf578911
+
+- partioning cloudtrail logs
+https://medium.com/@alsmola/partitioning-cloudtrail-logs-in-athena-29add93ee070
+
+have a lambda that runs on cron to automatically parition the athena table each day. (see last line in docs)
+https://docs.aws.amazon.com/athena/latest/ug/partitions.html
+
+**Can we get automatic partitioning by defining it at create??**
+https://gist.github.com/alsmola/db87d3ab1ade8e88da52650e719897c5
+
+
 
 
 
