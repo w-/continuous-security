@@ -22,6 +22,10 @@ Amazon GuardDuty is a threat detection service that continuously monitors for ma
 
 * https://github.com/aws-samples/amazon-guardduty-multiaccount-scripts
 
+- Quick test of if GuardDuty is working
+https://github.com/awslabs/amazon-guardduty-tester
+
+
 ## Securing The Root Account
 
 Do not use the Root account for day-to-day activity. Setup IAM Users with appropriate permissions
@@ -40,23 +44,27 @@ This is the last resort that Amazon will use to allow account recovery
 
 ## AWS Security Hub
 
-needs AWS Config running
+needs AWS Config running  
 https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html
 
-- Enable Guard Duty 
-- Enable CIS Compliance Check
-
+- Enable Guard Duty  
+- Enable CIS Compliance Check  
+- Automatically add child accounts
 https://github.com/awslabs/aws-securityhub-multiaccount-scripts
+
+- Manage Access to Security Hub
+  - Create a group for security related users  
+https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-access.html
+  
 
 
 ## AWS Config
-- Additional Custom checks
-- See lifetime config changes to resources
+- Additional Custom checks  
+- See lifetime config changes to resources  
+- Manage Access to AWS Config  
+  - Create a group for security related users  
+  https://docs.aws.amazon.com/config/latest/developerguide/example-policies.html
 
-
-
-## Web Federation
-Control access to console via web federation.
 
 
 ## Cloudtrail 
@@ -88,16 +96,33 @@ https://docs.aws.amazon.com/athena/latest/ug/partitions.html
 https://gist.github.com/alsmola/db87d3ab1ade8e88da52650e719897c5
 
 
+## Amazon Inspector
+
+- Basic Testing of network
+https://aws.amazon.com/blogs/security/amazon-inspector-assess-network-exposure-ec2-instances-aws-network-reachability-assessments/
+
+- Testing Continuous Deployment of AMIs
+https://aws.amazon.com/blogs/security/how-to-set-up-continuous-golden-ami-vulnerability-assessments-with-amazon-inspector/
 
 
+## Web Identity Federation
 
-## Identity Federation
+Control access to console via web federation.
 
 * https://aws.amazon.com/blogs/security/how-to-set-up-federated-single-sign-on-to-aws-using-google-apps/
 * http://federationworkshopreinvent2016.s3-website-us-east-1.amazonaws.com/
+
 
 ## WAF
 
 * https://github.com/awslabs/aws-well-architected-labs/tree/master/Security
 * https://aws.amazon.com/blogs/aws/prepare-for-the-owasp-top-10-web-application-vulnerabilities-using-aws-waf-and-our-new-white-paper/
 * https://github.com/aws-samples/aws-waf-sample/tree/master/waf-owasp-top-10
+
+
+# Appendix
+
+## Securing ElasticSearch / Kibana
+https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-ac.html
+
+https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html
