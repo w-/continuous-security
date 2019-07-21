@@ -30,6 +30,14 @@ https://github.com/awslabs/amazon-guardduty-tester
 
 Do not use the Root account for day-to-day activity. Setup IAM Users with appropriate permissions
 
+- Lab with many best practices
+https://github.com/awslabs/aws-well-architected-labs/tree/master/Security/100_AWS_Account_and_Root_User
+  - Review Credential report
+  - Configure Account Security Challenge Questions  
+    place answers in a physical secure location accessible only to key personnel in organization
+  - Configure Account Alternate Contacts
+  - Remove Your AWS Account Root User Access Keys
+
 - Enable MFA on Root Account User
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_mfa
 For virtual, review Authy vs Google Authenticator
