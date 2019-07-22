@@ -106,9 +106,12 @@ https://gist.github.com/alsmola/db87d3ab1ade8e88da52650e719897c5
 
 ## Amazon Inspector
 
+(not currently available in Singapore)
 - Basic Testing of network
 https://aws.amazon.com/blogs/security/amazon-inspector-assess-network-exposure-ec2-instances-aws-network-reachability-assessments/
 
+
+( can be accomplished by copying AMIs to another region and testing there)
 - Testing Continuous Deployment of AMIs
 https://aws.amazon.com/blogs/security/how-to-set-up-continuous-golden-ami-vulnerability-assessments-with-amazon-inspector/
 
