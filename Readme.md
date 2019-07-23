@@ -67,12 +67,21 @@ https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-access.html
 
 
 ## AWS Config
+Per region service. So need to enable for each region and each account.
+https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#multi-account-multi-region-data-aggregation
+
+All regions and accounts can be viewed centrally in one AWS Config "instance"   
+https://docs.aws.amazon.com/config/latest/developerguide/aggregate-data.html
+
+
 - Additional Custom checks  
+  - most common is checking S3 buckets for public read / write permissions  
+  
 - See lifetime config changes to resources  
+
 - Manage Access to AWS Config  
   - Create a group for security related users  
   https://docs.aws.amazon.com/config/latest/developerguide/example-policies.html
-
 
 
 ## Cloudtrail 
@@ -100,8 +109,23 @@ https://medium.com/@alsmola/partitioning-cloudtrail-logs-in-athena-29add93ee070
 have a lambda that runs on cron to automatically parition the athena table each day. (see last line in docs)
 https://docs.aws.amazon.com/athena/latest/ug/partitions.html
 
-**Can we get automatic partitioning by defining it at create??**
+**Can we get automatic partitioning by defining it at create??**  (open question)  
 https://gist.github.com/alsmola/db87d3ab1ade8e88da52650e719897c5
+
+ 
+- visualizing Cloudtrail logs in a kibana dashboard  
+https://medium.com/@marcusrosen_98470/real-time-log-streaming-with-cloudtrail-and-cloudwatch-logs-3389c4cc5ef4
+
+There are two ways as described above:
+**batch** Cloudtrail -> write log to S3 -> S3 event triggers lambda -> Lambda writes data to elasticsearch
+
+**streaming** Cloudtrail -> Cloudwatch Log -> cloudwatch log destination -> Kinesis -> Lambda writes to elastic search
+
+Once in Elasticsearch, we can build visualizations based on the useful queries above. some inspiration for dashboards
+https://github.com/adcreare/traildash2  
+https://app.logz.io/#/dashboard/apps (search for cloudtrail)
+
+
 
 
 ## Amazon Inspector
@@ -114,6 +138,15 @@ https://aws.amazon.com/blogs/security/amazon-inspector-assess-network-exposure-e
 ( can be accomplished by copying AMIs to another region and testing there)
 - Testing Continuous Deployment of AMIs
 https://aws.amazon.com/blogs/security/how-to-set-up-continuous-golden-ami-vulnerability-assessments-with-amazon-inspector/
+
+
+## Static Analysis of Containers
+
+Staticly analyze containers against known CVEs.
+
+https://github.com/aws-samples/amazon-ecs-mythicalmysfits-workshop/tree/master/workshop-2
+specifically Lab 4  
+https://github.com/aws-samples/amazon-ecs-mythicalmysfits-workshop/blob/master/workshop-2/Lab-4
 
 
 ## Web Identity Federation
