@@ -8,6 +8,13 @@ The following is a list of quick wins you can implement within your AWS account(
 * There is also now the [AWS Well-Architected Tool](https://aws.amazon.com/well-architected-tool/) which is a series of questions across those 5 areas (in my experience it takes about 2hrs to go through all 5 areas completely) to help you self-assess how well you're implementing suggested best-practice. At the end you'll get a report that lets you quickly identify where the gaps are and come to a decision among your team on whether you should prioritize addressing them or whether they're acceptable risks given the stage of your product/business.
 * The [AWS Well-Architected Labs (Security)](https://github.com/awslabs/aws-well-architected-labs/tree/master/Security) are a good place to look for inspiration on how to address some potential security related gaps in best practice. They're being regularly added to and at the time of writing included solutions such as locking down the `root` account, securing S3 buckets via CloudFront, implementing a Web Application Firewall, setting up granular user/group/role access, automatically detecting new non-compliant infrastructure, and setting permission boundaries to limit the scope of new users/groups/roles people can create.
 
+## AWS re:Inforce 2019  Security Best Practices the Well-Architected Way (SDD318)
+This is a great video on latest Security Best Practices.  
+
+https://www.youtube.com/watch?v=u6BCVkXkPnM
+
+Of particular note is the preparation of a playbook which you can combine with GuardDuty and Cloudtrail auditing above to enable quick targeted incident response.
+
 ## GuardDuty
 
 Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads.
@@ -98,20 +105,19 @@ Make sure no one has access to modify logs
 - Make sure log file validation is enabled to validate log integrity
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html
 
-- Useful approaches to investgating Cloudtrail logs
-https://aws.amazon.com/blogs/big-data/aws-cloudtrail-and-amazon-athena-dive-deep-to-analyze-security-compliance-and-operational-activity/
+- Useful approaches to investgating Cloudtrail logs  
+https://aws.amazon.com/blogs/big-data/aws-cloudtrail-and-amazon-athena-dive-deep-to-analyze-security-compliance-and-operational-activity/  
 
 https://medium.com/starting-up-security/investigating-cloudtrail-logs-c2ecdf578911
 
-- partioning cloudtrail logs
+- partioning cloudtrail logs  
 https://medium.com/@alsmola/partitioning-cloudtrail-logs-in-athena-29add93ee070
 
-have a lambda that runs on cron to automatically parition the athena table each day. (see last line in docs)
-https://docs.aws.amazon.com/athena/latest/ug/partitions.html
+  - have a lambda that runs on cron to automatically parition the athena table each day. (see last line in docs)
+    https://docs.aws.amazon.com/athena/latest/ug/partitions.html
 
 **Can we get automatic partitioning by defining it at create??**  (open question)  
 https://gist.github.com/alsmola/db87d3ab1ade8e88da52650e719897c5
-
  
 - visualizing Cloudtrail logs in a kibana dashboard  
 https://medium.com/@marcusrosen_98470/real-time-log-streaming-with-cloudtrail-and-cloudwatch-logs-3389c4cc5ef4
@@ -170,3 +176,5 @@ Control access to console via web federation.
 https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-ac.html
 
 https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html
+
+
