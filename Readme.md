@@ -3,7 +3,7 @@
 The following is a list of quick wins you can implement within your AWS account(s) to improve your security posture and protect your infrastructure.
 
 - [Baseline security best practices](#baseline-security-best-practices)
-- [AWS re](#inforce-2019--security-best-practices-the-well-architected-way-(sdd318))
+- [AWS re:inforce 2019 Security Best Practices The Well Architected Way](#inforce-2019--security-best-practices-the-well-architected-way-(sdd318))
 - [GuardDuty](#guardduty)
 - [Securing The Root Account](#securing-the-root-account)
 - [AWS Security Hub](#aws-security-hub)
@@ -26,7 +26,7 @@ The following is a list of quick wins you can implement within your AWS account(
 * There is also now the [AWS Well-Architected Tool](https://aws.amazon.com/well-architected-tool/) which is a series of questions across those 5 areas (in my experience it takes about 2hrs to go through all 5 areas completely) to help you self-assess how well you're implementing suggested best-practice. At the end you'll get a report that lets you quickly identify where the gaps are and come to a decision among your team on whether you should prioritize addressing them or whether they're acceptable risks given the stage of your product/business.
 * The [AWS Well-Architected Labs (Security)](https://github.com/awslabs/aws-well-architected-labs/tree/master/Security) are a good place to look for inspiration on how to address some potential security related gaps in best practice. They're being regularly added to and at the time of writing included solutions such as locking down the `root` account, securing S3 buckets via CloudFront, implementing a Web Application Firewall, setting up granular user/group/role access, automatically detecting new non-compliant infrastructure, and setting permission boundaries to limit the scope of new users/groups/roles people can create.
 
-## AWS re:Inforce 2019  Security Best Practices the Well-Architected Way (SDD318)
+## AWS re\:Inforce 2019  Security Best Practices the Well-Architected Way (SDD318)
 This is a great video on latest Security Best Practices.  
 
 https://www.youtube.com/watch?v=u6BCVkXkPnM
