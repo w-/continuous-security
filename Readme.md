@@ -1,4 +1,7 @@
-  - [Continuous Security](#continuous-security)
+# Continuous Security
+
+The following is a list of quick wins you can implement within your AWS account(s) to improve your security posture and protect your infrastructure.
+
     - [Baseline security best practices](#baseline-security-best-practices)
     - [AWS re](#inforce-2019--security-best-practices-the-well-architected-way-(sdd318))
     - [GuardDuty](#guardduty)
@@ -12,13 +15,8 @@
     - [Static Analysis of Containers](#static-analysis-of-containers)
     - [Web Identity Federation](#web-identity-federation)
     - [WAF](#waf)
-  - [Appendix](#appendix)
     - [Securing ElasticSearch / Kibana](#securing-elasticsearch-/-kibana)
 
-
-# Continuous Security
-
-The following is a list of quick wins you can implement within your AWS account(s) to improve your security posture and protect your infrastructure.
 
 ## Baseline security best practices
 
@@ -188,9 +186,9 @@ Control access to console via web federation.
 * https://github.com/aws-samples/aws-waf-sample/tree/master/waf-owasp-top-10
 
 
-# Appendix
+## Appendix
 
-## Securing ElasticSearch / Kibana
+### Securing ElasticSearch / Kibana
 https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-ac.html
 
 https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html
