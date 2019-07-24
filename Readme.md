@@ -2,20 +2,22 @@
 
 The following is a list of quick wins you can implement within your AWS account(s) to improve your security posture and protect your infrastructure.
 
-    - [Baseline security best practices](#baseline-security-best-practices)
-    - [AWS re](#inforce-2019--security-best-practices-the-well-architected-way-(sdd318))
-    - [GuardDuty](#guardduty)
-    - [Securing The Root Account](#securing-the-root-account)
-    - [AWS Security Hub](#aws-security-hub)
-    - [AWS Config](#aws-config)
-    - [Cloudtrail ](#cloudtrail-)
-      - [Best Practice](#best-practice)
-      - [Activities](#activities)
-    - [Amazon Inspector](#amazon-inspector)
-    - [Static Analysis of Containers](#static-analysis-of-containers)
-    - [Web Identity Federation](#web-identity-federation)
-    - [WAF](#waf)
-    - [Securing ElasticSearch / Kibana](#securing-elasticsearch-/-kibana)
+- [Baseline security best practices](#baseline-security-best-practices)
+- [AWS re](#inforce-2019--security-best-practices-the-well-architected-way-(sdd318))
+- [GuardDuty](#guardduty)
+- [Securing The Root Account](#securing-the-root-account)
+- [AWS Security Hub](#aws-security-hub)
+- [AWS Config](#aws-config)
+- [Cloudtrail ](#cloudtrail-)
+  - [Best Practice](#best-practice)
+  - [Activities](#activities)
+- [Amazon Inspector](#amazon-inspector)
+- [Static Analysis of Containers](#static-analysis-of-containers)
+- [Web Identity Federation](#web-identity-federation)
+- [WAF](#waf)
+- [Appendix](#appendix)
+  - [Securing ElasticSearch / Kibana](#securing-elasticsearch-/-kibana)
+
 
 
 ## Baseline security best practices
